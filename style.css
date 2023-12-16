@@ -131,8 +131,10 @@ input::placeholder {
 .btn3:hover {
   cursor: pointer;
   color: #fff;
-  background-color: hsla(7, 86%, 62%, 0.923);
+  background-color: hsla(7, 86%, 62%, 0.896);
+  transition: 0.5s ease-in-out;
 }
+
 
 .designs {
   position: relative;
@@ -140,38 +142,33 @@ input::placeholder {
 
 .design1 {
   position: absolute;
-  clip-path: polygon(23% 0, 82% 0, 82% 100%, 22% 100%);
-  background: linear-gradient(to top, #f6664b 20%, #b97697 50%, #8085e0 70%, #f2f4f9 90%);
-  width: 20em;
+  background: linear-gradient(to top, #f2f4f9 20%, #8085e0 50%, #b97697 70%, #f6664b 90%);
+  width: 15em;
   height: 70vh;
-  border-radius: 100%;
-  transform: rotate(-45deg);
+  border-radius: 50% 50% 10% 10% / 50% 50% 10% 10%;
+  transform: rotate(145deg);
   margin-top: -12em;
-  margin-left: 10em;
-  padding: 50px;
+  margin-left: 15em;
 }
 
 .design2 {
   position: absolute;
-  clip-path: polygon(23% 0, 82% 0, 82% 100%, 22% 100%);
+  border-radius: 50% 50% 10% 10% / 50% 50% 10% 10%;
   background: linear-gradient(to top, #f6664b 20%, #b97697 50%, #8085e0 70%);
   width: 10em;
   height: 50vh;
-  border-radius: 50%;
-  transform: rotate(-45deg);
+  transform: rotate(145deg);
   margin-top: 3em;
-  margin-left: -2em;
-  padding: 50px;
+  margin-left: -3em;
 }
 
 .design3 {
   position: absolute;
-  clip-path: polygon(23% 0, 82% 0, 82% 100%, 22% 100%);
-  background: linear-gradient(to top, #f6664b 20%, #b97697 50%, #8085e0 70%);
-  width: 20em;
+  background: linear-gradient(to top, #8085e0 20%, #b97697 50%, #f6664b 70%);
+  width: 15em;
   height: 70vh;
-  border-radius: 50%;
-  transform: rotate(140deg);
+  border-radius: 50% 50% 10% 10% / 50% 50% 10% 10%;
+  transform: rotate(320deg);
   margin-top: 19em;
   margin-left: 25em;
   padding: 50px;
@@ -180,6 +177,7 @@ input::placeholder {
 .design4 {
   position: absolute;
   clip-path: polygon(23% 0, 82% 0, 82% 100%, 22% 100%);
+  border-radius: 50% 50% 10% 10% / 50% 50% 10% 10%;
   background: linear-gradient(to top, #f6664b 20%, #b97697 50%, #8085e0 70%);
   width: 18em;
   height: 70vh;
@@ -190,12 +188,130 @@ input::placeholder {
   padding: 50px;
 }
 
+@media (max-width: 479px) and (min-width: 360px) {
+  body{
+    overflow: hidden;
+  }
+  .designs {
+    position: relative;
+    overflow: hidden;
+  }
+  h2 {
+    font-family: sans;
+    letter-spacing: 1px;
+    font-size: 1.5em; /* Adjusted font size */
+    color: hsl(7, 86%, 62%);
+  }
+
+  .container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .btn1 {
+    padding: 18px 10px 18px 10px;
+    background: transparent;
+    border: 1px solid hsl(222, 14%, 82%);
+    margin: 25px 10px 0 0;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    font-weight: 700;
+  }
+  
+  .btn2 {
+    padding: 10px 10px 10px 10px;
+    background: transparent;
+    border: 1px solid hsl(222, 14%, 82%);
+    margin: 25px 0 0 0;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    font-weight: 700;
+  }
+  .lineBreak {
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+  }
+  span {
+    color: hsl(222, 14%, 82%);
+    font-size: 1em;
+  }
+  
+  .horizontal-line {
+    width: 2em;
+    border-top: 1px solid hsl(222, 14%, 82%);
+    margin: 9px 1px 10px 0;
+  }
+  .horizontal-line2 {
+    width: 2em;
+    border-top: 1px solid hsl(222, 14%, 82%);
+    margin: 9px 0 10px 1px;
+  }
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-top: 5px;
+    font-weight: 700;
+  }
+  
+  #name,#email,#password {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.592);
+    padding: 0.5em;
+    width: 100%;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  input::placeholder {
+    color: hsl(222, 14%, 82%);
+  }
+  
+  
+  .terms {
+    margin: 10px 0;
+  }
+  
+  #cbox {
+    cursor: pointer;
+  }
+  
+  .btn3 {
+    margin-top: 10px;
+    width: 100%;
+    padding: 0.6em 0;
+    background-color: hsl(7, 86%, 62%);
+    border: none;
+  }
+  
+  .btn3:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: hsla(7, 86%, 62%, 0.923);
+  }
+  .designs {
+    display: none;
+  }
+}
 @media (min-width: 480px) and (max-width: 767px) {
   body {
     overflow: hidden;
   }
   .designs {
     position: relative;
+    /* overflow: hidden; */
   }
   .design1 {
     display: none;
@@ -239,37 +355,30 @@ input::placeholder {
   .designs {
     position: relative;
   }
-  
   .design1 {
     position: absolute;
-    clip-path: polygon(23% 0, 82% 0, 80% 100%, 22% 100%);
-    background: linear-gradient(to top, #f6664b 20%, #b97697 50%, #8085e0 70%, #f2f4f9 90%);
+    background: linear-gradient(to top, #f2f4f9 20%, #8085e0 50%, #b97697 70%, #f6664b 90%);
     width: 15em;
     height: 70vh;
-    transform: rotate(-45deg);
+    border-radius: 50% 50% 10% 10% / 50% 50% 10% 10%;
+    transform: rotate(145deg);
     margin-top: -11em;
     margin-left: -8em;
-    padding: 50px;
   }
-  
-  
   .design2 {
     display: none;
   }
-  
   .design3 {
     position: absolute;
-    clip-path: polygon(23% 0, 82% 0, 82% 100%, 22% 100%);
-    background: linear-gradient(to top, #f6664b 20%, #b97697 50%, #8085e0 70%);
-    width: 20em;
+    background: linear-gradient(to top, #f2f4f9 20%, #8085e0 50%, #b97697 70%, #f6664b 90%);
+    width: 15em;
     height: 70vh;
-    border-radius: 50%;
-    transform: rotate(140deg);
+    border-radius: 50% 50% 10% 10% / 50% 50% 10% 10%;
+    transform: rotate(330deg);
     margin-top: 25em;
     margin-left: -2em;
     padding: 50px;
   }
-  
   .design4 {
     display: none;
   }
@@ -279,28 +388,35 @@ input::placeholder {
   body {
     overflow: hidden;
   }
+  .designs {
+    position: relative;
+  }
   .design1 {
     position: absolute;
-    clip-path: polygon(23% 0, 82% 0, 80% 100%, 22% 100%);
-    background: linear-gradient(to top, #f6664b 20%, #b97697 50%, #8085e0 70%, #f2f4f9 90%);
-    width: 20em;
+    background: linear-gradient(to top, #f2f4f9 20%, #8085e0 50%, #b97697 70%, #f6664b 90%);
+    border-radius: 50% 50% 10% 10% / 50% 50% 10% 10%;
+    width: 15em;
     height: 70vh;
-    border-radius: 100%;
-    transform: rotate(-45deg);
+    transform: rotate(145deg);
     margin-top: -11em;
     margin-left: 5em;
     padding: 50px;
   }
   .design3 {
     position: absolute;
-    clip-path: polygon(23% 0, 82% 0, 82% 100%, 22% 100%);
-    background: linear-gradient(to top, #f6664b 20%, #b97697 50%, #8085e0 70%);
-    width: 20em;
+    background: linear-gradient(to top, #f2f4f9 20%, #8085e0 50%, #b97697 70%, #f6664b 90%);
+    width: 15em;
     height: 70vh;
-    border-radius: 50%;
-    transform: rotate(140deg);
+    border-radius: 50% 50% 10% 10% / 50% 50% 10% 10%;
+    transform: rotate(330deg);
     margin-top: 19em;
-    margin-left: 10em;
+    margin-left: 15em;
     padding: 50px;
+  }
+}
+
+@media (min-width: 1280px) {
+  body {
+    overflow: hidden;
   }
 }
