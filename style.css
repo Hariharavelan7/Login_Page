@@ -293,6 +293,33 @@ input::placeholder {
     border: none;
   }
   .background-designs {
+    position: relative;
+  }
+  .circle-design {
+    display: none;
+  }
+  .triangle-design {
+    position: absolute;
+    background: linear-gradient(to top, #f6664b 20%, #b97697 50%, #8085e0 70%);
+    width: 10em;
+    height: 40vh;
+    border-radius: 50%;
+    transform: rotate(-135deg);
+    margin-top: -10em;
+    margin-left: -4em;
+    padding: 50px;
+  }
+  .rectangle-design {
+    position: absolute;
+    background: linear-gradient(to top, #f6664b 20%, #b97697 50%, #8085e0 70%);
+    width: 18em;
+    height: 70vh;
+    border-radius: 50%;
+    margin-top: 30em;
+    margin-left: -10em;
+    padding: 50px;
+  }
+  .polygon-design {
     display: none;
   }
 }
